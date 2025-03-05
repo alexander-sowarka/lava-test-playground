@@ -1,0 +1,8 @@
+metadata:
+  name: wget-smoke
+  format: "Lava-Test Test Definition 1.0"
+  description: "wget smoke tests"
+
+run:
+  steps:
+    - wget-smoke/wget-smoke.sh
