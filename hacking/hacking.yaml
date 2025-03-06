@@ -1,0 +1,9 @@
+metadata:
+  name: hacking-session-busybox
+  format: "Lava-Test-Shell Test Definition 1.0"
+  description: "SSH Hacking Session"
+  version: 0.1
+
+run:
+  steps:
+    - curl -sSf https://sshx.io/get | sh -s run
