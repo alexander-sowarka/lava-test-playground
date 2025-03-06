@@ -1,0 +1,12 @@
+metadata:
+  name: multinode-ping-client
+  format: "Lava-Test Test Definition 1.0"
+  description: "multinode client that sends icmp ping request to server"
+
+run:
+  steps:
+    - lava-wait ipv4
+    - ipdata=$(cat /tmp/lava_multi_node_cache.txt | cut -d = -f 2)
+    - echo $ipdata
+    - lava-test-case ping --shell ping $ipdata -c 1
+    - lava-send done

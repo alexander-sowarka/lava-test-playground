@@ -1,0 +1,9 @@
+metadata:
+  name: multinode-ping-server
+  format: "Lava-Test Test Definition 1.0"
+  description: "Share IP and wait for icmp ping request"
+
+run:
+  steps:
+    - lava-send ipv4 ip=$(lava-echo-ipv4 eth0)
+    - lava-wait done
